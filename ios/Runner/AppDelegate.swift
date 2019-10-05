@@ -7,6 +7,8 @@ import Flutter
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
+    let nativeViewFactory = NativeViewFactory()
+    registrar(forPlugin: "Runner").register(nativeViewFactory, withId: "NativeView")
     GeneratedPluginRegistrant.register(with: self)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
