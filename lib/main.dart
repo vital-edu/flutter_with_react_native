@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ar.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -97,6 +99,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
+            ),
+            RaisedButton(
+              child: Text('Open route'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AR()),
+                );
+              },
             ),
           ],
         ),
