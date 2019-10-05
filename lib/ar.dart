@@ -8,7 +8,7 @@ class AR extends StatelessWidget {
         title: Text('AR View'),
       ),
       body: Center(
-        child: Text('You did it'),
+        child: UiKitView(viewType: 'NativeView'),
       ),
     );
   }
