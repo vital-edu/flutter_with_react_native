@@ -39,7 +39,7 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.flutter_nasa"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -63,6 +63,17 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation "com.facebook.react:react-native:0.59.3"
+    implementation 'com.google.android.exoplayer:exoplayer:2.7.1'
+    implementation 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'
+    implementation 'com.amazonaws:aws-android-sdk-core:2.7.7'
+    implementation 'com.amazonaws:aws-android-sdk-ddb:2.7.7'
+    implementation 'com.amazonaws:aws-android-sdk-ddb-mapper:2.7.7'
+    implementation 'com.amazonaws:aws-android-sdk-cognito:2.7.7'
+    implementation 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.7.7'
+    implementation project(':gvr_common')
+    implementation project(':arcore_client')
+    implementation project(path: ':react_viro')
+    implementation project(path: ':viro_renderer')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
