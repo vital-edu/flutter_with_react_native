@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class AR extends StatelessWidget {
@@ -8,7 +9,9 @@ class AR extends StatelessWidget {
         title: Text('AR View'),
       ),
       body: Center(
-        child: UiKitView(viewType: 'NativeView'),
+        child: defaultTargetPlatform == TargetPlatform.android ?
+          AndroidView(viewType: 'NativeView') :
+          UiKitView(viewType: 'NativeView')
       ),
     );
   }
